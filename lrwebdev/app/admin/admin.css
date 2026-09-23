@@ -1,0 +1,83 @@
+.admin-body {
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    background-color: #F8FAFC;
+}
+
+.admin-layout {
+    display: grid;
+    grid-template-columns: 240px 1fr;
+    flex-grow: 1;
+}
+
+.admin-main {
+    padding: 32px;
+}
+
+.page-title-box {
+    margin-bottom: 24px;
+}
+
+.page-title-box h1 {
+    font-size: 24px;
+    font-weight: 800;
+    color: #0F172A;
+}
+
+.admin-section {
+    margin-bottom: 32px;
+}
+
+.section-subtitle {
+    font-size: 18px;
+    font-weight: 700;
+    margin-bottom: 16px;
+    color: #0F172A;
+}
+
+/* Статистика на дашборді */
+.stats-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+    gap: 20px;
+}
+
+.stat-card {
+    background-color: #FFFFFF;
+    padding: 20px;
+    border-radius: 12px;
+    border: 1px solid #E2E8F0;
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.02);
+}
+
+.stat-label {
+    font-size: 13px;
+    color: #64748B;
+    font-weight: 600;
+}
+
+.stat-value {
+    font-size: 28px;
+    font-weight: 800;
+    color: #0F172A;
+}
+
+.stat-warning { border-left: 4px solid #F59E0B; }
+.stat-danger { border-left: 4px solid #EF4444; }
+.stat-success { border-left: 4px solid #10B981; }
+
+.notifications-box {
+    background-color: #FFFFFF;
+    padding: 20px;
+    border-radius: 12px;
+    border: 1px solid #E2E8F0;
+}
+
+.empty-msg {
+    color: #64748B;
+    font-size: 14px;
+}
