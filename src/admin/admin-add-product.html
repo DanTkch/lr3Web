@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="uk">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Додати товар — Адмінпанель</title>
+  <link rel="stylesheet" href="adminStyle.css">
+</head>
+<body class="admin-body">
+
+<header class="admin-header">
+  <div class="admin-header-brand">
+    <a href="admin-dashboard.html" class="admin-logo">
+      <span class="logo-icon">🛒</span> <strong>GroceryExpress</strong> <span class="badge-admin">Admin</span>
+    </a>
+  </div>
+  <div class="admin-header-user">
+    <span>Вітаємо, <strong>Адміністратор</strong></span>
+    <a href="../AnUserIndex.html" class="btn btn-outline btn-sm">На сайт</a>
+  </div>
+</header>
+
+<div class="admin-layout">
+  <aside class="admin-sidebar">
+    <nav class="admin-nav">
+      <h3 class="admin-nav-title">Меню</h3>
+      <ul class="admin-nav-list">
+        <li class="admin-nav-item"><a href="admin-dashboard.html" class="admin-nav-link">Дашборд</a></li>
+        <li class="admin-nav-item"><a href="admin-inventory.html" class="admin-nav-link">Управління складом</a></li>
+        <li class="admin-nav-item active"><a href="admin-add-product.html" class="admin-nav-link">Додати товар</a></li>
+        <li class="admin-nav-item"><a href="admin-orders.html" class="admin-nav-link">Замовлення</a></li>
+      </ul>
+    </nav>
+  </aside>
+
+  <main class="admin-main">
+    <div class="page-title-box">
+      <h1>Додати новий товар на склад</h1>
+    </div>
+
+    <form action="#" method="post" enctype="multipart/form-data" class="admin-form">
+      <fieldset class="form-fieldset">
+        <legend class="form-legend">Основні дані</legend>
+        <div class="form-grid">
+          <div class="form-group">
+            <label for="name" class="form-label">Назва товару:</label>
+            <input type="text" id="name" name="name" class="form-control" required>
+          </div>
+          <div class="form-group">
+            <label for="sku" class="form-label">Артикул (SKU):</label>
+            <input type="text" id="sku" name="sku" class="form-control" required>
+          </div>
+          <div class="form-group full-width">
+            <label for="category" class="form-label">Категорія:</label>
+            <select id="category" name="category" class="form-select" required>
+              <option value="">-- Оберіть категорію --</option>
+              <option value="vegetables">Овочі та фрукти</option>
+              <option value="dairy">Молочна продукція</option>
+              <option value="meat">М'ясо та птиця</option>
+              <option value="grocery">Бакалія</option>
+            </select>
+          </div>
+        </div>
+      </fieldset>
+
+      <fieldset class="form-fieldset">
+        <legend class="form-legend">Ціна та наявність</legend>
+        <div class="form-grid">
+          <div class="form-group">
+            <label for="price" class="form-label">Ціна (грн):</label>
+            <input type="number" id="price" name="price" step="0.01" min="0" class="form-control" required>
+          </div>
+          <div class="form-group">
+            <label for="stock" class="form-label">Кількість на складі:</label>
+            <input type="number" id="stock" name="stock" min="0" value="0" class="form-control" required>
+          </div>
+        </div>
+      </fieldset>
+
+      <fieldset class="form-fieldset">
+        <legend class="form-legend">Зображення</legend>
+        <div class="form-group">
+          <input type="file" id="image" name="image" accept="image/*" class="file-input">
+        </div>
+      </fieldset>
+
+      <div class="form-actions">
+        <button type="submit" class="btn btn-primary">Створити товар</button>
+        <button type="reset" class="btn btn-reset">Очистити</button>
+      </div>
+    </form>
+  </main>
+</div>
+
+<footer class="admin-footer">
+  <p>&copy; 2026 GroceryExpress Admin Panel</p>
+</footer>
+
+</body>
+</html>

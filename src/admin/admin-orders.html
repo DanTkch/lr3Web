@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="uk">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Замовлення — Адмінпанель</title>
+  <link rel="stylesheet" href="adminStyle.css">
+</head>
+<body class="admin-body">
+
+<header class="admin-header">
+  <div class="admin-header-brand">
+    <a href="admin-dashboard.html" class="admin-logo">
+      <span class="logo-icon">🛒</span> <strong>GroceryExpress</strong> <span class="badge-admin">Admin</span>
+    </a>
+  </div>
+  <div class="admin-header-user">
+    <span>Вітаємо, <strong>Адміністратор</strong></span>
+    <a href="../AnUserIndex.html" class="btn btn-outline btn-sm">На сайт</a>
+  </div>
+</header>
+
+<div class="admin-layout">
+  <aside class="admin-sidebar">
+    <nav class="admin-nav">
+      <h3 class="admin-nav-title">Меню</h3>
+      <ul class="admin-nav-list">
+        <li class="admin-nav-item"><a href="admin-dashboard.html" class="admin-nav-link">Дашборд</a></li>
+        <li class="admin-nav-item"><a href="admin-inventory.html" class="admin-nav-link">Управління складом</a></li>
+        <li class="admin-nav-item"><a href="admin-add-product.html" class="admin-nav-link">Додати товар</a></li>
+        <li class="admin-nav-item active"><a href="admin-orders.html" class="admin-nav-link">Замовлення</a></li>
+      </ul>
+    </nav>
+  </aside>
+
+  <main class="admin-main">
+    <div class="page-title-box">
+      <h1>Управління замовленнями покупців</h1>
+    </div>
+
+    <div class="table-wrapper">
+      <table class="data-table">
+        <thead>
+        <tr>
+          <th>№ Замовлення</th>
+          <th>Клієнт</th>
+          <th>Дата та час</th>
+          <th>Сума</th>
+          <th>Спосіб оплати</th>
+          <th>Статус</th>
+          <th>Дії</th>
+        </tr>
+        </thead>
+        <tbody>
+        <tr>
+          <td><strong class="order-id">#1024</strong></td>
+          <td>
+            <div class="customer-info">
+              <span class="customer-name">Іван Петренко</span>
+              <span class="customer-phone">097-111-2233</span>
+            </div>
+          </td>
+          <td>22.09.2026, 14:30</td>
+          <td><strong class="order-amount">420.00 грн</strong></td>
+          <td>Карткою онлайн</td>
+          <td>
+            <select name="status" class="form-select status-select">
+              <option value="new" selected>Нове</option>
+              <option value="processing">В обробці</option>
+              <option value="delivering">В дорозі</option>
+              <option value="completed">Виконано</option>
+            </select>
+          </td>
+          <td>
+            <div class="table-btn-group">
+              <button type="button" class="btn btn-sm btn-outline">Деталі</button>
+              <button type="button" class="btn btn-sm btn-primary">Зберегти</button>
+            </div>
+          </td>
+        </tr>
+        </tbody>
+      </table>
+    </div>
+  </main>
+</div>
+
+<footer class="admin-footer">
+  <p>&copy; 2026 GroceryExpress Admin Panel</p>
+</footer>
+
+</body>
+</html>
