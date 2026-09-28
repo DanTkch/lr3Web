@@ -19,14 +19,12 @@
     animation: tooltipFadeIn 0.2s cubic-bezier(0.16, 1, 0.3, 1) forwards;
 }
 
-/* Стрілочка (хвостик) */
 .tooltip-bubble::after {
     content: '';
     position: absolute;
     border-style: solid;
 }
 
-/* 1. Позиція ЗВЕРХУ (top) */
 .tooltip-top {
     bottom: 100%;
     left: 50%;
@@ -41,7 +39,6 @@
     border-color: #0f172a transparent transparent transparent;
 }
 
-/* 2. Позиція ЗНИЗУ (bottom) */
 .tooltip-bottom {
     top: 100%;
     left: 50%;
@@ -56,7 +53,6 @@
     border-color: transparent transparent #0f172a transparent;
 }
 
-/* 3. Позиція ЗЛІВА (left) */
 .tooltip-left {
     right: 100%;
     top: 50%;
@@ -71,7 +67,6 @@
     border-color: transparent transparent transparent #0f172a;
 }
 
-/* 4. Позиція СПРАВА (right) */
 .tooltip-right {
     left: 100%;
     top: 50%;
@@ -86,7 +81,6 @@
     border-color: transparent #0f172a transparent transparent;
 }
 
-/* Анімація появи */
 @keyframes tooltipFadeIn {
     from {
         opacity: 0;
