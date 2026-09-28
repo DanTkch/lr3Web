@@ -73,7 +73,6 @@
     font-weight: 600;
 }
 
-/* Динамічні стилі кнопок */
 .btn-add {
     width: 100%;
     padding: 8px 12px;
@@ -99,7 +98,6 @@
     background-color: #059669;
 }
 
-/* Стан завантаження */
 .btn-loading {
     background-color: #64748b;
     color: #ffffff;
@@ -107,7 +105,6 @@
     opacity: 0.9;
 }
 
-/* Стан доданого товару */
 .btn-added {
     background-color: #059669;
     color: #ffffff;
@@ -115,7 +112,6 @@
     transform: scale(0.98);
 }
 
-/* Анімований спінер */
 .spinner {
     width: 12px;
     height: 12px;
