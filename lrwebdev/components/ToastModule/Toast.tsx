@@ -21,7 +21,6 @@ export default function Toast({
     const [isExiting, setIsExiting] = useState(false);
 
     useEffect(() => {
-        // Запускаємо таймер закриття
         const timer = setTimeout(() => {
             handleClose();
         }, duration);
@@ -31,7 +30,6 @@ export default function Toast({
 
     const handleClose = () => {
         setIsExiting(true);
-        // Даємо час для відтворення анімації зникнення перед видаленням з DOM
         setTimeout(() => {
             onClose();
         }, 300);
