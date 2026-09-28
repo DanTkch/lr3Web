@@ -8,7 +8,7 @@ export type TooltipPosition = 'top' | 'bottom' | 'left' | 'right';
 interface TooltipProps {
     text: string;
     position?: TooltipPosition;
-    delay?: number; // затримка перед появою в мілісекундах
+    delay?: number;
     children: ReactNode;
 }
 
