@@ -16,7 +16,6 @@
     word-break: break-word;
 }
 
-/* Варіанти кольорів */
 .toast-success {
     background-color: #10B981;
 }
@@ -33,7 +32,6 @@
     background-color: #3B82F6;
 }
 
-/* Іконка та кнопка закриття */
 .toast-icon {
     font-size: 16px;
     font-weight: 800;
