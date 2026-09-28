@@ -50,7 +50,6 @@ img {
   display: block;
 }
 
-/* Спільні кнопки */
 .btn {
   display: inline-flex;
   align-items: center;
@@ -114,7 +113,6 @@ img {
   border-radius: var(--radius-md);
 }
 
-/* Спільні елементи форм */
 .form-group {
   margin-bottom: 16px;
 }
@@ -145,7 +143,6 @@ img {
 }
 .products-grid {
   display: grid;
-  /* Автоматически умещает карточки шириной от 180px до 220px */
   grid-template-columns: repeat(auto-fill, minmax(180px, 220px));
   gap: 16px;
   align-items: stretch;
