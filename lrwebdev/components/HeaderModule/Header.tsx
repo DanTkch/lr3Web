@@ -29,7 +29,7 @@ export default function Header() {
                 </ul>
 
                 <div className="auth-buttons">
-                    {/* Кнопка швидкого переходу в Адмінпанель */}
+
                     <Link href="/admin" className="btn btn-outline" style={{ borderColor: '#0F172A', color: '#0F172A' }}>
                         ⚙️ Адмінка
                     </Link>
