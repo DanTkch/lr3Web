@@ -6,7 +6,6 @@ import './FilterSidebar.css';
 export default function FilterSidebar() {
     const handleSubmit = (e: FormEvent) => {
         e.preventDefault();
-        // Логіка відправки фільтрів або пошуку
     };
 
     return (
