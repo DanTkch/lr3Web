@@ -26,10 +26,8 @@ interface ProductCardProps {
 export default function ProductCard({ product }: ProductCardProps) {
     const { title, price, imageSrc, details } = product;
 
-    // Динамічний стан кнопки: 'idle' | 'loading' | 'added'
     const [buttonState, setButtonState] = useState<'idle' | 'loading' | 'added'>('idle');
 
-    // Стан для Toast-сповіщення
     const [toast, setToast] = useState<{
         show: boolean;
         message: string;
@@ -43,23 +41,18 @@ export default function ProductCard({ product }: ProductCardProps) {
     const handleAddToCart = async () => {
         if (buttonState !== 'idle') return;
 
-        // 1. Переводимо кнопку в стан завантаження
         setButtonState('loading');
 
-        // Імітація запиту до API / збереження в State
         await new Promise((resolve) => setTimeout(resolve, 600));
 
-        // 2. Змінюємо стан на "Додано"
         setButtonState('added');
 
-        // 3. Показуємо спливаюче сповіщення
         setToast({
             show: true,
             message: `«${title}» успішно додано в кошик!`,
             type: 'success',
         });
 
-        // 4. Через 1.8 секунди повертаємо кнопку в початковий стан
         setTimeout(() => {
             setButtonState('idle');
         }, 1800);
@@ -86,7 +79,6 @@ export default function ProductCard({ product }: ProductCardProps) {
                         </Tooltip>
                     </h3>
 
-                    {/* Вивід списку деталей з об'єкта product */}
                     <div className="product-info-list">
                         {details?.map((detail, index) => (
                             <p key={index} className="product-info">
@@ -99,7 +91,6 @@ export default function ProductCard({ product }: ProductCardProps) {
                         {price} <span className="currency">грн</span>
                     </div>
 
-                    {/* Динамічна кнопка */}
                     <button
                         type="button"
                         onClick={handleAddToCart}
@@ -123,7 +114,6 @@ export default function ProductCard({ product }: ProductCardProps) {
                 </div>
             </div>
 
-            {/* Динамічне Toast-сповіщення */}
             {toast.show && (
                 <Toast
                     message={toast.message}
